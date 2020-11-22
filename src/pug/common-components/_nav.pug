@@ -1,0 +1,34 @@
+//- mixin odpowiada za tworzenie tablicy dla górnej nawigacji. 
+mixin list(listName, list_item_Name, ...items)
+  ul(class=listName)
+    each item in items
+      li(class=list_item_Name)
+        a(href=item[0])= item[1]
+
+section.master-navigation.container-fluid
+    div.row
+        div.logo-wrap.col-sm-3
+            img(src="images/logo.svg", alt="BHP Inka")
+        nav.navigation-wrap.col-sm-9
+            div.navigation-burger
+                span.navigation-burger_item
+                span.navigation-burger_item
+                span.navigation-burger_item
+            //- + list(listName, list_item_Name, ['link', 'nazwa linku'])
+            +list( 
+                'navigation-list',
+                'navigation-list_items', 
+                ['#','O FIRMIE'],
+                ['#','SYSTEM ZARZĄDZANIA BHP'],
+                ['#','REFERENCJE I CERTYFIKATY INKA BHP'],
+                ['#','E-LEARNING BHP INKA'],
+                ['#','SZKOLENIA BHP'],
+                ['#','KURS PIERWSZEJ POMOCY'],
+                ['#','SZKOLENIA PPOŻ'],
+                ['#','NADZÓR BHP'],
+                ['#','PRZEGLĄDY GAŚNIC'],
+                ['#','SPRZEDARZ GAŚNIC PYŁOWYCH ABF'],
+                ['#','BLOG'],
+                ['#','KONTAKT']
+            )
+

@@ -161,9 +161,9 @@ function serve(cb) {
 } 
 
 function process_html(cb) {
-    gulp.src('./html2pug/**/*.html')
+    gulp.src('./htmlPug/**/*.html')
         .pipe(html2pug({ fragment: true }))
-        .pipe(gulp.dest('./html2pug/'));
+        .pipe(gulp.dest('./htmlPug/'));
 	cb();
 }
 

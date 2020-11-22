@@ -1,7 +1,6 @@
 {
   "name": "new-inka",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -39,5 +38,6 @@
     "gulp-scss": "^1.4.0",
     "optipng-bin": "^7.0.0",
     "pngquant-bin": "^6.0.0"
-  }
+  },
+  "description": ""
 }
