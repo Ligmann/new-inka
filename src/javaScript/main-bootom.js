@@ -1,8 +1,6 @@
 /*************
  **	SWIPER	**
  **************/
-
-//PARTNERS
 new Swiper('.swiper-container.js-partners', {
 	spaceBetween: 30,
 	centeredSlides: true,
@@ -12,4 +10,15 @@ new Swiper('.swiper-container.js-partners', {
 	},
 });
 
-//INFORMATIONS TWO COLUMNS
+//	drop-down navigation
+
+let clickElementNav = document.querySelector('.navigation-list_items');
+
+clickElementNav.addEventListener("click", function() {
+
+	let drop_downNavigation = document.querySelector(".under-menu");
+	// console.log(drop_downNavigation);
+	drop_downNavigation.classList.toggle("drop-down");
+});
+
+

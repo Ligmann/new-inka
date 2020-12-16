@@ -1,31 +1,29 @@
+// - MIXIN ADD ELEMENTS SLIDER 
+mixin partners-slider-elements(...each_partnersItems)
+	div(class="swiper-slide")
+		div(class="row partners__wrap")
+			each atrybute in each_partnersItems
+				div(class="col-sm-3 partners-items")
+						img(class="partners-items__images" src=atrybute[0] alt=atrybute[1])
+
+
 section.partners.section-wrapper
 	div.container
 		div.swiper-container.js-partners
 			div.swiper-wrapper
-				div.swiper-slide
-					div.row.partners__wrap
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo.webp", alt="elo").partners-items__images
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo1.webp", alt="elo").partners-items__images
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo2.webp", alt="elo").partners-items__images
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo3.webp", alt="elo").partners-items__images
-				div.swiper-slide
-					div.row.partners__wrap
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo11.webp", alt="elo").partners-items__images
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo12.webp", alt="elo").partners-items__images
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo2.webp", alt="elo").partners-items__images
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo3.webp", alt="elo").partners-items__images
-				div.swiper-slide
-					div.row.partners__wrap
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo8.webp", alt="elo").partners-items__images
-						div.col-sm-3.partners-items
-							img(src="images/slider/partners/logo10.webp", alt="elo").partners-items__images
-
+				+partners-slider-elements(
+					['images/slider/partners/logo.webp','alt'],
+					['images/slider/partners/logo1.webp','alt'],
+					['images/slider/partners/logo2.webp','alt'],
+					['images/slider/partners/logo3.webp','alt']
+				)
+				+partners-slider-elements(
+					['images/slider/partners/logo11.webp','alt'],
+					['images/slider/partners/logo12.webp','alt'],
+					['images/slider/partners/logo2.webp','alt'],
+					['images/slider/partners/logo3.webp','alt']
+				)
+				+partners-slider-elements(
+					['images/slider/partners/logo8.webp','alt'],
+					['images/slider/partners/logo10.webp','alt']
+				)

@@ -1,12 +1,10 @@
 header.container.header-top.section-wrapper
 	div.row
 		div.col-sm-6.header-top_text
-			h1.
-				Welcome to #[span.header-text_underline Landkit]. #[br] Develop anything.
-			p.paragraph-text-bold.
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+			h1 #{h1_header_top} #[span.header-text_underline #{h1_header_top_color}]. #[br] #{h1_header_top_br}
+			p.paragraph-text-bold #{text_header_top}
 			div.wrap-button
-				a(href="#").primary-button Poznaj Nas #[span.button-arrow-right]
-				a(href="#").primary-button Szkolenia Online
+				a(href=linkOne_header_top).primary-button #{linkOne_text_header_top} #[span.button-arrow-right]
+				a(href=linkTwo_header_top).primary-button #{linkTwo_text_header_top}
 		div.col-sm-6.header-top_images
-			img(src="images/header/home/baner-home.jpg", alt="Welcome to Landkit. Develop anything.")
+			img(src=image_header_top, alt=altImage_header_top)

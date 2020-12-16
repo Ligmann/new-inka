@@ -11,11 +11,10 @@ footer.master-footer
 		div.box-centered
 			div.col-xl-6
 				div.box-centered__text
-					span.rounded-box.small-text-addColor DOWIEDŹ SIĘ WIĘCEJ
-					h2 Lorem ipsum dolor sit amet
-					p.paragraph-text-addColor-bold.
-						Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit.
-					a(href="#").left-box__button.primary-button Lorem Ipsum
+					span.rounded-box.small-text-addColor #{alternative_footer}
+					h2 #{header_footer}
+					p.paragraph-text-addColor-bold #{text_footer}
+					a(href="#").left-box__button.primary-button #{buttonName_footer}
 						span.button-arrow-right
 	div.master-footer__botton.section-wrapper
 		div.container
@@ -49,7 +48,7 @@ footer.master-footer
 					)
 				div.col-xl-3
 					+footer-nafigation(
-						'USŁGI',
+						'SZKOLENIA I USŁGI',
 						['a', 'System Zarządzania BHP'],
 						['a', 'Szkolenia Online'],
 						['a', 'Szkolenia BHP'],

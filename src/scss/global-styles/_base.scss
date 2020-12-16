@@ -169,4 +169,8 @@ input {
 //	GLOBALS WRAP IMAGES
 .wrap-images {
 	padding-left: 64px;
+
+	img{
+		border-radius: $radius;
+	}
 }

@@ -16,33 +16,35 @@ section.informations-twoColumn.section-wrapper
 		div.box-centered
 			div.col-xl-6
 				div.box-centered__text
-					h2 Lorem ipsum dolor sit amet
-					p.paragraph-text-bold.
-						Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit.
+					h2 #{h2_informations_slider_elements}
+					p.paragraph-text-bold #{text_informations_slider_elements}
 		div#carouselExampleControls.carousel.slide(data-bs-ride='carousel')
 			div.informations-slider
 				div.carousel-inner
 					+informations-slider-elements(
 						'active',
-						'images/slider/text-and-background/spotkanie.jpg',
-						'jestem tutaj',
-						'Lorem ipsum dolor sit amet',
-						'Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit.',
-						'Lorem ipsum')
+						sliImages_informations_slider_elements,
+						sliAlt_informations_slider_elements,
+						sliHeader_informations_slider_elements,
+						sliText_informations_slider_elements,
+						sliAlternative_informations_slider_elements
+						)
 					+informations-slider-elements(
 						'',
-						'images/slider/text-and-background/spotkanie-dwa.webp',
-						'jestem tutaj',
-						'Lorem ipsum dolor sit amet',
-						'Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit.',
-						'Lorem ipsum')
+						sliImagesTwo_informations_slider_elements,
+						sliAltTwo_informations_slider_elements,
+						sliHeaderTwo_informations_slider_elements,
+						sliTextTwo_informations_slider_elements,
+						sliAlternativeTwo_informations_slider_elements
+						)
 					+informations-slider-elements(
 						'',
-						'images/slider/text-and-background/meetap.jpg',
-						'jestem tutaj',
-						'Lorem ipsum dolor sit amet',
-						'Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit.',
-						'Lorem ipsum')
+						sliImagesThree_informations_slider_elements,
+						sliAltThree_informations_slider_elements,
+						sliHeaderThree_informations_slider_elements,
+						sliTextThree_informations_slider_elements,
+						sliAlternativeThree_informations_slider_elements
+						)
 			a.carousel-control-prev.informations-slider__button(href='#carouselExampleControls' role='button' data-bs-slide='prev')
 				span.carousel-control-prev-icon(aria-hidden='true')
 				span.visually-hidden Previous
