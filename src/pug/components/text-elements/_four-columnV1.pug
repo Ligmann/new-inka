@@ -1,0 +1,35 @@
+mixin  four-columnV1-boxItems(images, alt, header, text)
+	div(class="four-columnV1__wraper-boxItems")
+		span(class="global-icon")
+			img(src=images alt=alt)
+		span(class="four-columnV1__wraper-boxItems__text")
+			h3=header
+			p(class="paragraph-text-addColor")=text
+
+section.four-columnV1.section-wrapper
+	div.container
+		div.four-columnV1__wraper
+			+four-columnV1-boxItems(
+				'images/icons/check/check-header.svg',
+				'elo',
+				'Lorem Ipsum dolar',
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. In placeat quidem cumque quis nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+			)
+			+four-columnV1-boxItems(
+				'images/icons/check/check-header.svg',
+				'elo',
+				'Lorem Ipsum dolar',
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. In placeat quidem cumque quis nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+			)
+			+four-columnV1-boxItems(
+				'images/icons/check/check-header.svg',
+				'elo',
+				'Lorem Ipsum dolar',
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. In placeat quidem cumque quis nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+			)
+			+four-columnV1-boxItems(
+				'images/icons/check/check-header.svg',
+				'elo',
+				'Lorem Ipsum dolar',
+				'Lorem ipsum, dolor sit amet consectetur adipisicing elit. In placeat quidem cumque quis nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+			)

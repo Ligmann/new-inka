@@ -1,1 +1,1 @@
-console.log('hello word')
+let colapse = document.getElementById("myDIV");

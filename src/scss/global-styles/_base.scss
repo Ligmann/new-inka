@@ -1,0 +1,172 @@
+//	TAG ALL STYLES
+:root {
+	font-family: $family-primary;
+	color: $black;
+	font-size: 1.07em;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+input {
+	border: inherit;
+	color: inherit;
+}
+//	NAVIGACJA
+.logo-wrap{
+	height: 79px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	&__images{
+		object-fit: cover;
+		height: 187px;
+	}
+}
+
+//	BUTTON
+.primary-button {
+	position: relative;
+	height: 48px;
+	padding: 8px 16px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background-color: $primary-color;
+	color: $white;
+	border: none;
+	border-radius: 8px;
+	font-weight: 400;
+	cursor: pointer;
+	transition: $animation transform, $animation box-shadow;
+
+	&:hover {
+		color: $white;
+		transform: translateY(-3px);
+		box-shadow: 0px -3px 16px 0px #b3b2b2;
+	}
+}
+
+.button-arrow-right {
+	background: url('../images/icons/arrow/right-arrow.svg') center center no-repeat;
+	background-size: contain;
+	width: 15px;
+	height: 15px;
+	margin: 0 0 -3px 8px;
+}
+
+//	GLOBAL SECTION STYLE
+.section-wrapper {
+	margin-top: $global-distance;
+}
+
+.section-wrapper-AddColor {
+	padding-top: $global-distance;
+	background: $background-two;
+}
+
+.section-wrapper-gradient {
+	padding-top: $global-distance;
+	background: $background-gradient;
+}
+
+//	GLOBAL ROTATE
+.rotate-wrap {
+	// perspective: 5000px;
+	// transform-style: preserve-3d;
+
+	&__images {
+		// transform: rotateY(-32deg) rotateX(5deg);
+		// backface-visibility: hidden;
+		box-shadow: $shadow;
+		border-radius: $radius;
+	}
+}
+
+//	GLOBAL ICON TEXT STYLES
+.global-icon{
+	display: block;
+	width: 64px;
+}
+
+//	CENTER ELEMENTS
+.box-centered {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 24px;
+
+	&__text {
+		text-align: center;
+	}
+}
+
+//	CENTERS ELEMENTS
+.globla-flex-center{
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+}
+
+//	GLOBALS LIST INFORMATION
+.list-information {
+	padding: 0;
+
+	&__items {
+		display: flex;
+		align-items: center;
+		list-style: none;
+		margin-bottom: 8px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&-iacon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 20px;
+			height: 20px;
+			margin-right: 16px;
+			background-color: $gray-light;
+			border-radius: 100%;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				background: url(../images/icons/check/check-header.svg) center center no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+}
+
+//	GLOBALS WRAP IMAGES
+.rounded-box{
+	background-color: $background-two;
+	padding: 16px 24px;
+	border-radius: 24px;
+	display: inline-block;	
+}
+
+//	GLOBALS WRAP IMAGES
+.wrap-images {
+	padding-left: 64px;
+}

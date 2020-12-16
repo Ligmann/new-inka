@@ -1,0 +1,23 @@
+.header-top {
+	&_text {
+		padding-right: 108px;
+		display: flex;
+		flex-flow: column;
+		justify-content: flex-end;
+
+		.header-text_underline{
+			display: inline-block;
+		}
+	
+		.paragraph-text-bold {
+			padding: 8px 0 32px;
+		}
+	}
+	.primary-button	{
+		&:nth-child(2n) {
+			margin: 0 12px;
+			color: $primary-color;
+			background-color: $green;
+		}
+	}
+}

@@ -1,0 +1,54 @@
+//	ROBOTO
+//	Link goole font  https://fonts.google.com/specimen/Roboto?sidebar.open=true&selection.family=Roboto:wght@100;300;400;500
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+//Montserrat
+//	Link goole font  https://fonts.google.com/specimen/Montserrat?preview.text=%C4%85%C5%9B%C4%87%C4%99&preview.text_type=custom&sidebar.open=true&selection.family=Montserrat:wght@100;200;300;400;500;600
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+// HEADER
+h1{
+	@include text-header;
+}
+h2{
+	@include text-header($h2:true);
+}
+h3{
+	@include text-header($h3:true);
+}
+h4{
+	@include text-header($h4:true);
+}
+
+.header-text{
+	&_underline{
+		display: block;
+		color: $primary-color;
+	}
+}
+
+//	PARAGRAF
+.paragraph-text{
+	@include text-paragraph;
+}
+
+.paragraph-text-bold{
+	@include text-paragraph($bold-text:true);
+}
+
+.paragraph-text-addColor{
+	@include text-paragraph($add-color:true);
+}
+
+.paragraph-text-addColor-bold{
+	@include text-paragraph($bold-text:true, $add-color:true);
+}
+
+//	SAMLL TEXT
+.small-text{
+	@include text-paragraph($small:true, $bold-text:true);
+}
+.small-text-addColor{
+	@include text-paragraph($small:true, $bold-text:true, $add-color:true);
+
+}

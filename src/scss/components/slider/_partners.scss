@@ -1,0 +1,20 @@
+.partners {
+	padding: 32px 0;
+	border-top: $boder-styles;
+	border-bottom: $boder-styles;
+
+	&__wrap {
+		.partners-items {
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&__images {
+				max-height: 100%;
+				max-width: 70%;
+				filter: grayscale(100%);
+			}
+		}
+	}
+}

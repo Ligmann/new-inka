@@ -1,9 +1,18 @@
 //- Title
-- let nameTitle = 'Usługi BHP: kursy i ochrona przeciwpożarowa – BHP INKA Śląsk';
+- let nameTitle = "Usługi BHP: kursy i ochrona przeciwpożarowa – BHP INKA Śląsk";
 
 include ../common-components/_head
 body
-    main(type="main")
-        include ../common-components/_nav
-        include ../common-components/_header
-        include ../common-components/_footer
+	main(type="main")
+		include ../common-components/_nav
+		include ../common-components/_header
+		include ../components/text-elements/_three-column
+		include ../components/slider/_partners
+		div.section-wrapper-gradient
+			include ../components/form/_contakt-one
+			include ../components/text-elements/_text-and-background
+			include ../components/slider/_informations-twoColumns
+		div.section-wrapper-AddColor
+			include ../components/text-elements/_element-twoColumnsV2
+			include ../components/offer/_two-columnsV1
+		include ../common-components/_footer

@@ -1,0 +1,26 @@
+mixin offer-elements( items)
+	ul(class="list-information")
+		each item in items
+			li(class="list-information__items")
+				span(class="list-information__items-iacon")
+				span(class="paragraph-text-addColor")=item
+
+section.contakt-one.section-wrapper
+	div.container
+		div.row
+			div.col-sm-4
+				div.contakt-one__left
+					img(src="images/form/v1/images-contakt.webp", alt="").contakt-one__left__image
+					form(action="").left-box
+						input(placeholder="Imię i Nazwisko" type="text").left-box__items
+						input(placeholder="Email" type="email").left-box__items
+						input(placeholder="Telefon" type="tel").left-box__items
+						input(value="Wyślij" type="button").left-box__button.primary-button
+			div.col-sm-8
+				div.contakt-one__right
+					h2 Lorem ipsum, dolor sit #[span.header-text_underline Lorem ipsum Necessitatibus.]
+					p.paragraph-text-bold.
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatem nulla, voluptates, cumque exercitationem recusandae distinctio, quo nobis optio deserunt alias doloribus consectetur magni quam. Veritatis illum eligendi porro incidunt?
+					+offer-elements(
+						['Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor']
+					)

@@ -1,0 +1,35 @@
+// - mixin
+mixin offer-elements(HowOffer, textOffer, items, linkItem, linkText)
+	div.offer-elements
+		span(class="rounded-box small-text-addColor")=HowOffer
+		p(class="paragraph-text-bold")=textOffer
+		ul(class="list-information")
+			each item in items
+				li(class="list-information__items")
+					span(class="list-information__items-iacon")
+					span(class="paragraph-text-addColor")=item
+		a(class="primary-button" href=linkItem)=linkText 
+
+section.two-columnsV1.section-wrapper
+	div.container
+		div.box-centered
+			div.col-xl-6
+				div.box-centered__text
+					h2 Lorem ipsum dolor sit amet
+					p.paragraph-text-addColor-bold.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit.
+		div.two-columnsV1__wraper
+			+offer-elements(
+				'SZKOLENIA ONLINE',
+				'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, numquam atque! Earum provident excepturi consectetur, quos ducimus accusantium quidem voluptate ',
+				['Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor'],
+				'#',
+				'Zobacz oferte'
+			)
+			+offer-elements(
+				'SZKOLENIA STACIONARNE',
+				'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, numquam atque! Earum provident excepturi consectetur, quos ducimus accusantium quidem voluptate ',
+				['Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor'],
+				'#',
+				'Zobacz oferte'
+			)

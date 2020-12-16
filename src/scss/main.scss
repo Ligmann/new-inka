@@ -1,2 +1,26 @@
-// common-components
-@import 'common-components/_nav'
+//	GLOBALS STYLES
+@import 'global-styles/veriables';
+@import 'global-styles/_mixin';
+@import 'global-styles/_base';
+@import 'global-styles/_font';
+
+//	COMMON-COMPONENTS
+@import 'common-components/_nav';
+@import 'common-components/_header-top';
+@import 'common-components/_footer';
+
+//	COMPONENTS TEXT ELEMENT
+@import 'components/text-elements/_three-column';
+@import 'components/text-elements/_text-and-background';
+@import 'components/text-elements/_element-twoColumnsV2';
+@import 'components/text-elements/_four-columnV1';
+
+//	SLIDERS
+@import 'components/slider/_partners';
+@import 'components/slider/_informations-twoColumns';
+
+//	COMPONENTS FORM
+@import 'components/form/_contakt-one.scss';
+
+//	OFFER
+@import 'components/offer/_two-columnsV1';

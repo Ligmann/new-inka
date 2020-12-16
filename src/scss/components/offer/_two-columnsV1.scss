@@ -1,0 +1,50 @@
+.two-columnsV1 {
+	&__wraper {
+		display: flex;
+		justify-content: center;
+		flex-flow: wrap;
+
+		.offer-elements {
+			position: relative;
+			width: 40%;
+			padding: 40px 62px;
+			margin-right: 16px;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			background-color: $white;
+			border-radius: $radius;
+			box-shadow: $shadow;
+			transition: $animation transform;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:hover {
+				transform: translateY(1px) scale(1.07);
+				z-index: 2;
+			}
+
+			&__HowOffer {
+				background-color: $gray-light;
+				padding: 16px 24px;
+				border-radius: 24px;
+				display: inline-block;
+			}
+
+			.paragraph-text-bold{
+				margin: 24px 0;
+			}
+
+			.list-information{
+				width: 100%;
+				margin-bottom: 32px;
+			}
+
+			.primary-button {
+				width: 100%;
+			}
+		} 
+	}
+}

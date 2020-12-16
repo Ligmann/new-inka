@@ -1,0 +1,41 @@
+//	HEADER MIXIN
+@mixin	text-header($h2: false, $h3: false, $h4: false) {
+	color: $black;
+	font-weight: 400;
+	font-size: 2.35em;
+	margin-bottom: 24px;
+
+	@if $h2 {
+		font-size: 1.75em;
+	}
+
+	@if $h3 {
+		font-size: 1.35em;
+		margin-bottom: 8px;
+	}
+
+	@if $h4 {
+		font-size: 1em;
+	}
+}
+
+//	PARAGRAF MIXIN
+@mixin	text-paragraph($bold-text:false, $add-color:false, $small:false) {
+	color: $secunadry-color;
+	line-height: 1.8;
+	font-size: .94em;
+	margin: 0;
+
+	@if	$bold-text {
+		font-size: 1em;
+		font-weight: 500;
+	}
+
+	@if	$add-color {
+		color: $secundary-color-two;
+	}
+
+	@if	$small {
+		font-size: .59em;
+	}
+}

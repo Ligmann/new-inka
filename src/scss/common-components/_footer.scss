@@ -1,0 +1,94 @@
+.master-footer{
+	&__top {
+		.rounded-box {
+			margin-bottom: 8px;
+		}
+	}
+
+	.left-box__button {
+		margin-top: 24px;
+	}
+
+	&__botton {
+		background-color: $background-two;
+		padding: 33px 0 16px;
+
+		.logo-wrap{
+			width: 20%;
+
+			&__images{
+				height: 175px;
+			}
+		}
+
+		.footer-anchor {
+			display: block;
+			font-size: .89em;
+			margin-top: 8px;
+			font-weight: 500;
+			color: $secundary-color-two;
+			transition: $animation color;
+
+			&:hover{
+				color: $primary-color;
+			}
+		}
+
+		&-icon {
+			display: flex;
+			margin: 16px 0;
+
+			&__item {
+				display: block;
+				background-size: cover;
+				width: 32px;
+				height: 32px;
+				transition:$animation transform;
+
+				&:hover{
+					transform: translateY(-3px);
+				}
+
+				&:first-child {
+					background: url(../images/icons/social-media/facebook.svg) center center no-repeat;
+					background-size: cover;
+					margin-right: 8px;
+				}
+
+				&:last-child {
+					background: url(../images/icons/social-media/twitter.svg) center center no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+
+		.footer-header {
+			margin-bottom: 16px;
+		}
+
+		.footer-navigation {
+			color: $secundary-color-two;
+			font-weight: 500;
+			padding: 0;
+
+			&__list {
+				list-style-type: none;
+				padding-bottom: 8px;
+				font-size: .89em;
+				transition: $animation color;
+
+				&:hover{
+					color: $primary-color;
+				}
+
+				&:last-child {
+					padding: 0;
+				}
+
+				&-item {
+
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.text-and-background {
+	&__left {
+		height: 100%;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+
+		.column-iformation {
+			margin-top: 32px;
+
+			&__wrap {
+				display: flex;
+				margin-bottom: 24px;
+
+				&-icon {
+					margin-right: 24px;
+				}
+
+				&-text {
+					margin-right: 24px;
+					width: 95%;
+				}
+			}
+		}
+	}
+}

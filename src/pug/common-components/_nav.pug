@@ -1,34 +1,77 @@
 //- mixin odpowiada za tworzenie tablicy dla górnej nawigacji. 
-mixin list(listName, list_item_Name, ...items)
-  ul(class=listName)
-    each item in items
-      li(class=list_item_Name)
-        a(href=item[0])= item[1]
+//- mixin list(listName, listItemName, ...items)
+//- 	ul(class=listName)
+//- 		each item in items
+//- 			li(class=listItemName)
+//- 				a(class=list_item_Name_link class=item[0] href=item[1])=item[2]
 
-section.master-navigation.container-fluid
-    div.row
-        div.logo-wrap.col-sm-3
-            img(src="images/logo.svg", alt="BHP Inka")
-        nav.navigation-wrap.col-sm-9
-            div.navigation-burger
-                span.navigation-burger_item
-                span.navigation-burger_item
-                span.navigation-burger_item
-            //- + list(listName, list_item_Name, ['link', 'nazwa linku'])
-            +list( 
-                'navigation-list',
-                'navigation-list_items', 
-                ['#','O FIRMIE'],
-                ['#','SYSTEM ZARZĄDZANIA BHP'],
-                ['#','REFERENCJE I CERTYFIKATY INKA BHP'],
-                ['#','E-LEARNING BHP INKA'],
-                ['#','SZKOLENIA BHP'],
-                ['#','KURS PIERWSZEJ POMOCY'],
-                ['#','SZKOLENIA PPOŻ'],
-                ['#','NADZÓR BHP'],
-                ['#','PRZEGLĄDY GAŚNIC'],
-                ['#','SPRZEDARZ GAŚNIC PYŁOWYCH ABF'],
-                ['#','BLOG'],
-                ['#','KONTAKT']
-            )
-
+section.master-navigation.container
+	div.row
+		a(href="#").logo-wrap.col-sm-1
+			img(src="images/logo/logo.svg", alt="BHP Inka").logo-wrap_images
+		nav.navigation-wrap.col-sm-11
+			div.navigation-burger
+				span.navigation-burger_item
+				span.navigation-burger_item
+				span.navigation-burger_item
+			ul.navigation-list
+				li.navigation-list_items
+					a.navigation-list_items__arrow Poznaj Nas
+					div.under-menu
+						div.row
+							div.col-sm-6.under-menu__left
+								img(src="images/text-elements/home-bacground.webp", alt="").under-menu__left-images
+							ul.col-sm-6.under-menu__right
+									li.under-menu__right-items
+										a(href="#") O Firmie
+									li.under-menu__right-items
+										a(href="#") Obsługa Firm
+									li.under-menu__right-items
+										a(href="#") Referencje
+									li.under-menu__right-items
+										a(href="#") Certyfikaty
+				li.navigation-list_items
+					a.navigation-list_items__arrow Szkolenia
+					div.under-menu
+						div.row
+							div.col-sm-6.under-menu__left
+								img(src="images/text-elements/home-bacground.webp", alt="").under-menu__left-images
+							ul.col-sm-6.under-menu__right
+								li.under-menu__right-items
+									a(href="#") Szkolenia Online
+								li.under-menu__right-items
+									a(href="#") Szkolenia BHP	
+								li.under-menu__right-items
+									a(href="#") Szkolenia PPOŻ
+								li.under-menu__right-items
+									a(href="#") Kurs Pierweszej pomocy
+				li.navigation-list_items
+					a(#) E-Sklep					
+				li.navigation-list_items
+					a.navigation-list_items__arrow Usługi
+					div.under-menu
+						div.row
+							div.col-sm-6.under-menu__left
+								img(src="images/text-elements/home-bacground.webp", alt="").under-menu__left-images
+							ul.col-sm-6.under-menu__right
+								li.under-menu__right-items
+									a(href="#") System Zarządzania BHP
+								li.under-menu__right-items
+									a(href="#") Przeglady Gaśnic
+								li.under-menu__right-items
+									a(href="#") Sprzedaż Gaśnic							
+				li.navigation-list_items
+					a(#) Blog
+				li.navigation-list_items
+					a(#) Kontakt
+			//- +list( 
+			//- 	'navigation-list',
+			//- 	'navigation-list_items', 
+			//- 	['navigation-list_items__arrow','#',''],
+			//- 	['navigation-list_items__arrow','#',''],
+			//- 	['','#',''],
+			//- 	['navigation-list_items__arrow','#',''],
+			//- 	['','#','Kontakt'],
+			//- 	['','#','']
+			//- )
+			button.primary-button Platforma Szkoleniowa

@@ -1,9 +1,118 @@
-.master-navigation{
-    .logo-wrap{
-        background-color: red;
-    }
-    .navigation-wrap{
-        display: flex;
-        justify-content: flex-end;
-    }
+.master-navigation {
+	padding-top: 24px;
+
+	.row {
+		align-items: center;
+	}
+
+	.logo-wrap {
+		height: 79px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+
+		&_images {
+			object-fit: cover;
+			height: 187px;
+		}
+	}
+	
+	.navigation-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+
+		.navigation-list {
+			padding: 0;
+			margin: 0;
+			
+			&_items {
+				color: $secundary-color-two;
+				display: inline-block;
+				padding: 0 16px;
+				font-weight: 500;
+				transition: $animation color;
+				cursor: pointer;
+
+				.under-menu {
+					position: absolute;
+					left: 50%;
+					top: 255px;
+					transform: translate(-50%, -50%);
+					width: 800px;
+					height: 300px;
+					background-color: $white;
+					box-shadow: 0px 5px 20px 1px #b3b2b2;
+					border-radius: $radius;
+					z-index: 2;
+
+					.row {
+						height: 100%;
+					}
+
+					&__left {
+						height: 100%;
+						position: relative;
+						padding: 0;
+
+						&-images {
+							height: 100%;
+							border-top-left-radius: $radius;
+							border-bottom-left-radius: $radius;
+						}
+
+						&::after {
+							content: "";
+							width: 100%;
+							height: 100%;
+							position: absolute;
+							left: 0;
+							top: 0;							
+							border-top-left-radius: $radius;
+							border-bottom-left-radius: $radius;
+							background-color: rgba($color: $primary-color, $alpha: .7);
+						}
+					}
+
+					&__right {
+						height: 100%;
+						padding: 40px 55px;
+						cursor: auto;
+
+						&-items {
+							list-style-type: square;
+							padding-bottom: 8px;
+							font-size: .89em;
+							padding-left: 10px;
+						}
+					}
+				}
+
+				&:hover {
+					color: $primary-color;
+				}
+
+				&__arrow {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					
+					&::after {
+						content: "";
+						display: inline-block;
+						background: url(../images/icons/arrow/down-arrow.svg) center center no-repeat;
+						background-size: cover;
+						width: 11px;
+						height: 11px;
+						margin: 2px 0 0 8px;
+					}
+				}
+			}
+		}
+		.primary-button {
+			font-weight: 500;
+		}
+	}
 }

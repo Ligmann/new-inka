@@ -1,0 +1,61 @@
+.contakt-one{
+	margin-top: 0;
+
+	&__left {
+		border-radius: $radius;
+		box-shadow: $shadow;
+		transition: $animation transform, $animation box-shadow;
+
+		&:hover{
+			transform: translateY(-5px);
+			box-shadow: 0px -4px 71px 0 #b3b2b2;
+		}
+	
+		&__image {
+			border-radius: $radius;
+		}
+
+		.left-box {
+			padding: 32px 16px 24px;
+			background-color: $white;
+			border-bottom-left-radius: $radius;
+			border-bottom-right-radius: $radius;
+
+			&__items {
+				width: 100%;
+				border-bottom: $boder-styles;
+				font-size: 0.80em;
+				font-weight: 500;
+				padding: 24px 0 16px;
+				
+				&:first-child{
+					padding-top: 0;
+				}
+			}
+
+			&__button {
+				width: 100%;
+				margin-left: 0;
+				margin-top: 40px;
+			}
+		}
+	}
+
+	&__right {
+		height: 100%;
+		padding-left: 104px;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+
+		.list-information{
+			display: flex;
+			flex-flow: wrap;
+			margin-top: 24px;
+
+			&__items{
+				width: 35%;
+			}
+		}
+	}
+}

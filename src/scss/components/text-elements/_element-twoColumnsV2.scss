@@ -1,0 +1,25 @@
+.element-twoColumnsV2{
+	&__number{
+		&-item{
+			width: auto;
+			margin-top: 32px;
+			display: inline-block;
+
+			&:nth-child(2n){
+				border-left: 1px solid#d9e2ef;
+				border-right: 1px solid #d9e2ef;
+				padding: 0 16px;
+			}
+
+			&__number{
+				display: block;
+				margin-bottom: 8px;
+				font-weight: 500;
+			}
+
+			&__text{
+				display: block;
+			}
+		}
+	}
+}

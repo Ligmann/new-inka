@@ -1,0 +1,66 @@
+//	STYLES FROM THE SLIDER ARE IN THE .js-informations CLASS
+.informations-twoColumn {
+	.informations-slider {
+		position: relative;
+
+		.carousel-inner {
+			border-radius: $radius;
+			box-shadow: $shadow;
+		}
+
+		&__images {
+			clip-path: circle(100.1% at 14% 36%);
+			height: 376px;
+		}
+	
+		&__text {
+			height: 100%;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			text-align: center;
+			padding-right: 3vw;
+
+			.paragraph-text{
+				color: $black;
+			}
+		}
+
+		&__button {
+			width: 56px;
+			height: 56px;
+			border-radius: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: $primary-color;
+			opacity: 1;
+			transition: $animation opacity;
+
+			&:hover{
+				opacity: .8;
+			}
+
+			.carousel-control-next-icon {
+				background: url("../images/icons/arrow/right-arrow.svg") center center no-repeat;
+				background-size: cover;
+				width: 21px;
+				height: 21px;
+			}
+
+			.carousel-control-prev-icon {
+				background: url("../images/icons/arrow/left-arrow.svg") center center no-repeat;
+				background-size: cover;
+				width: 21px;
+				height: 21px;
+			}
+		}
+	}
+
+	.carousel-control-prev {
+		left: -24px;
+	}
+
+	.carousel-control-next {
+		right: -24px;
+	}
+}
