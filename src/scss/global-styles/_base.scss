@@ -13,7 +13,7 @@ img {
 a {
 	color: inherit;
 	text-decoration: none;
-	
+
 	&:hover {
 		color: inherit;
 		text-decoration: none;
@@ -24,15 +24,16 @@ input {
 	border: inherit;
 	color: inherit;
 }
+
 //	NAVIGACJA
-.logo-wrap{
+.logo-wrap {
 	height: 79px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
 
-	&__images{
+	&__images {
 		object-fit: cover;
 		height: 187px;
 	}
@@ -73,16 +74,28 @@ input {
 //	GLOBAL SECTION STYLE
 .section-wrapper {
 	margin-top: $global-distance;
+
+	@media (max-width:1000px) {
+		margin-top: $global-distance-rwd;
+	}
 }
 
 .section-wrapper-AddColor {
 	padding-top: $global-distance;
 	background: $background-two;
+
+	@media (max-width:1000px) {
+		padding-top: $global-distance-rwd;
+	}
 }
 
 .section-wrapper-gradient {
 	padding-top: $global-distance;
 	background: $background-gradient;
+
+	@media (max-width:1000px) {
+		padding-top: $global-distance-rwd;
+	}
 }
 
 //	GLOBAL ROTATE
@@ -99,7 +112,7 @@ input {
 }
 
 //	GLOBAL ICON TEXT STYLES
-.global-icon{
+.global-icon {
 	display: block;
 	width: 64px;
 }
@@ -116,7 +129,7 @@ input {
 }
 
 //	CENTERS ELEMENTS
-.globla-flex-center{
+.globla-flex-center {
 	display: flex;
 	justify-content: center;
 	flex-flow: column;
@@ -159,18 +172,26 @@ input {
 }
 
 //	GLOBALS WRAP IMAGES
-.rounded-box{
+.rounded-box {
 	background-color: $background-two;
 	padding: 16px 24px;
 	border-radius: 24px;
-	display: inline-block;	
+	display: inline-block;
 }
 
 //	GLOBALS WRAP IMAGES
 .wrap-images {
 	padding-left: 64px;
 
-	img{
+	img {
 		border-radius: $radius;
+	}
+
+	@media (max-width:1400px) {
+		height: 100%;
+	}
+
+	@media (max-width:1200px) {
+		padding-left: 20px;
 	}
 }

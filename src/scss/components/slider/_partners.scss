@@ -4,6 +4,10 @@
 	border-bottom: $boder-styles;
 	cursor: grab;
 
+	@media (max-width:770px) {
+		display: none;
+	}
+
 	&__wrap {
 		.partners-items {
 			height: 100px;
@@ -15,6 +19,10 @@
 				max-height: 100%;
 				max-width: 70%;
 				filter: grayscale(100%);
+
+				@media (max-width:1200px) {
+					max-width: 100%;
+				}
 			}
 		}
 	}

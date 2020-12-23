@@ -1,12 +1,35 @@
 //	HEADER MIXIN
-@mixin	text-header($h2: false, $h3: false, $h4: false) {
+@mixin	text-header($h1:false, $h2: false, $h3: false, $h4: false) {
 	color: $black;
 	font-weight: 400;
 	font-size: 2.35em;
 	margin-bottom: 24px;
 
+	@if $h1 {
+		font-size: 2.35em;
+		@media (max-width:1200px) {
+			font-size: 2.30em
+		}
+
+		@media (max-width:992px) {
+			font-size: 2.10em
+		}
+
+		@media (max-width:500px) {
+			font-size: 1.80em
+		}
+	}
+
+
 	@if $h2 {
 		font-size: 1.75em;
+
+		@media (max-width:1200px) {
+			font-size: 1.45em
+		}
+		@media (max-width:992px) {
+			font-size: 1.30em
+		}
 	}
 
 	@if $h3 {
@@ -26,9 +49,20 @@
 	font-size: .94em;
 	margin: 0;
 
+	@media (max-width:1200px) {
+		font-size: .92em
+	}
+
 	@if	$bold-text {
 		font-size: 1em;
 		font-weight: 500;
+
+		@media (max-width:1200px) {
+			font-size: .94em
+		}
+		@media (max-width:999px) {
+			font-size: .900em
+		}
 	}
 
 	@if	$add-color {

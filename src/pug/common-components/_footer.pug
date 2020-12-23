@@ -19,7 +19,7 @@ footer.master-footer
 	div.master-footer__botton.section-wrapper
 		div.container
 			div.row
-				div.col-xl-3
+				div.col-xl-3.col-lg-3.col-md-6.col-sm-12
 					a(href="#").logo-wrap
 						img(src="images/logo/logo.svg", alt="inak bhp").logo-wrap__images
 					div.master-footer__botton-icon
@@ -29,7 +29,7 @@ footer.master-footer
 						|2020 ©  Prawa Autroskie 
 					a(href="https://ligmann.eu").footer-anchor
 						| Carried: Damian Ligmann
-				div.col-xl-3
+				nav.col-xl-3.col-lg-3.col-md-6.col-sm-12
 					+footer-nafigation(
 						'MAPA STRONY',
 						['a', 'O Firmie'],
@@ -46,7 +46,7 @@ footer.master-footer
 						['a', 'Kontakt'],
 						['a', 'Blog']
 					)
-				div.col-xl-3
+				div.col-xl-3.col-lg-3.col-md-6.col-sm-12
 					+footer-nafigation(
 						'SZKOLENIA I USŁGI',
 						['a', 'System Zarządzania BHP'],
@@ -57,13 +57,14 @@ footer.master-footer
 						['a', 'Przeglady Gaśnic'],
 						['a', 'Sprzedaż Gaśnic']
 					)
-				div.col-xl-3
+				div.col-xl-3.col-lg-3.col-md-6.col-sm-12
 					+footer-nafigation(
 						'KONTAKT',
 						['/kontakt', 'Godziny Otwarcia |  pon-sob w godz. 9:00 -17:00'],
 						['tel:+48515760315', 'Tel: 515 760 315 | 500 408 404'],
 						['amailto:inkabhp@gmail.com', 'E-mail: inkabhp@gmail.com']
 					)
+	div(class="fb-customerchat" attribution=setup_tool page_id="483296748368950")
 
 script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
 script(src="javascript/main-bootom.js")

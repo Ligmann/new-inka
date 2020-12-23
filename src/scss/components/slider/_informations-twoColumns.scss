@@ -11,6 +11,24 @@
 		&__images {
 			clip-path: circle(100.1% at 14% 36%);
 			height: 376px;
+
+			img{
+				@media (max-width:1200px) {
+					height: 100%;
+				}
+
+				@media (max-width:991px) {
+					width: 100%;
+				}
+			}
+
+			@media (max-width:1200px) {
+				clip-path: none;
+			}
+
+			@media (max-width:991px) {
+				height: 300px;
+			}
 		}
 	
 		&__text {
@@ -23,6 +41,15 @@
 
 			.paragraph-text{
 				color: $black;
+			}
+
+			@media (max-width:991px) {
+				padding: 24px;
+				height: 230px;
+			}
+
+			@media (max-width:400px) {
+				height: 300px;
 			}
 		}
 
@@ -53,14 +80,34 @@
 				width: 21px;
 				height: 21px;
 			}
+
+			@media (max-width:1010px) {
+				border-radius: 0;
+				height: 10%;
+				opacity: .2;
+				top: 55%;
+			}
+
+			@media (max-width:400px) {
+				top: 50%;
+			}
 		}
 	}
 
 	.carousel-control-prev {
 		left: -24px;
+
+		@media (max-width:1010px) {
+			left:0;
+		}
 	}
 
 	.carousel-control-next {
 		right: -24px;
+
+		
+		@media (max-width:1010px) {
+			right:0;
+		}
 	}
 }

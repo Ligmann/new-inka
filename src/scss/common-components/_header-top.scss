@@ -1,9 +1,20 @@
 .header-top {
+
+	.row{
+		@media (max-width: 1000px) {
+			flex-wrap: wrap-reverse;
+		}
+	}
+
 	&_text {
 		padding-right: 108px;
 		display: flex;
 		flex-flow: column;
 		justify-content: flex-end;
+
+		@media (max-width: 1200px) {
+			padding-right: calc(var(--bs-gutter-x) / 2);
+		}
 
 		.header-text_underline{
 			display: inline-block;
@@ -11,6 +22,28 @@
 	
 		.paragraph-text-bold {
 			padding: 8px 0 32px;
+		}
+
+		.wrap-button{
+			.primary-button{
+				@media (max-width:400px) {
+					width: 100%;
+					margin: 8px 0 !important;
+
+					&:last-child{
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	&_images {
+		@media (max-width: 1000px) {
+			margin-bottom: 40px;
+		}
+
+		@media (max-width:991px) {
+			display: none;
 		}
 	}
 	.primary-button	{

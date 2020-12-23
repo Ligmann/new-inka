@@ -1,4 +1,5 @@
 .master-footer{
+	
 	&__top {
 		.rounded-box {
 			margin-bottom: 8px;
@@ -31,6 +32,12 @@
 
 			&:hover{
 				color: $primary-color;
+			}
+
+			&:last-child{
+				@media (max-width:992px) {
+					margin-bottom: 24px;
+				}
 			}
 		}
 

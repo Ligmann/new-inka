@@ -2,10 +2,10 @@
 mixin informations-slider-elements(className, images, alt, header, text, slimText)
 	div(class="carousel-item" class=className)
 		div.row
-			div.col-xl-7.col-lg-6
+			div.col-xl-7.col-lg-6.col-md-12
 				div.informations-slider__images
 					img(src=images, alt=alt)
-			div.col-xl-5.col-lg-6
+			div.col-xl-5.col-lg-6.col-md-12
 				div.informations-slider__text
 					h3(class="header-text_underline")=header
 					p(class="paragraph-text")=text
@@ -14,7 +14,7 @@ mixin informations-slider-elements(className, images, alt, header, text, slimTex
 section.informations-twoColumn.section-wrapper
 	div.container
 		div.box-centered
-			div.col-xl-6
+			div.col-xl-6.col-lg-6
 				div.box-centered__text
 					h2 #{h2_informations_slider_elements}
 					p.paragraph-text-bold #{text_informations_slider_elements}

@@ -21,6 +21,10 @@
 			border-bottom-left-radius: $radius;
 			border-bottom-right-radius: $radius;
 
+			@media (max-width:767px) {
+				margin-bottom: 40px;
+			}
+
 			&__items {
 				width: 100%;
 				border-bottom: $boder-styles;
@@ -48,13 +52,44 @@
 		flex-flow: column;
 		justify-content: center;
 
+		@media(max-width:1400px){
+			padding-left: 72px;
+		}
+
+		@media(max-width:1200px){
+			padding-left: 32px;
+		}
+
 		.list-information{
 			display: flex;
 			flex-flow: wrap;
 			margin-top: 24px;
 
 			&__items{
-				width: 35%;
+				width: calc(50% - 90px);
+
+				@media(max-width:1400px) {
+					width: calc(50% - 55px);
+				}
+
+				@media(max-width:1200px) {
+					width: calc(50% - 0px);
+				}
+
+				@media(max-width:999px) {
+					width: 100%;
+					margin-bottom: 16px;
+				}
+
+				@media (max-width:767px) {
+					width: 50%;
+					margin-bottom: 0;
+				}
+
+				@media(max-width:460px) {
+					width: 100%;
+					margin-bottom: 16px;
+				}
 			}
 		}
 	}
