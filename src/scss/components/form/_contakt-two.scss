@@ -1,0 +1,35 @@
+.contakt-two{
+	&__wrap{
+		background-color: $white;
+		border-radius: $radius;
+		padding: 32px 16px 24px;
+	}
+	&__input{
+		width: 100%;
+		border-bottom: 1px solid $gray-light;
+		font-size: 0.80em;
+		font-weight: 500;
+		padding: 24px 0 16px;
+	}
+
+	&__texttarea{
+		width: 100%;
+		font-size: 0.80em;
+		font-weight: 500;
+		padding: 24px 0 16px;
+		border: 0;
+		border-bottom: 1px solid $gray-light;
+		max-height: 142px;
+		min-height: 142px;
+	}
+
+	&__button{
+		width: 100%;
+		margin-left: 0;
+		margin-top: 40px;
+	}
+
+	&__images{
+		min-height: 100%;
+	}
+}

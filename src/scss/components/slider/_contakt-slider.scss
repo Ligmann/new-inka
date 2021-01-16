@@ -1,0 +1,11 @@
+.contakt-slider {
+	&__pagination {
+		background-color: red;
+	}
+
+	&__pagination-item {
+		.text-indent {
+			text-indent: inherit;
+		}
+	}
+}

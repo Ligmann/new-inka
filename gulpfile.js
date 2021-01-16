@@ -53,6 +53,7 @@ function process_babel(arg1, arg2) {
 function process_pug(cb) {
 	gulp.src([
 		'src/pug/source-files/index.pug',
+		'src/pug/source-files/contakt.pug',
 	])
 		.pipe(gulp_pug())
 		.on('error', swallowError)
@@ -130,7 +131,7 @@ function serve(cb) {
 		port: 8080,
 		server: {
 			baseDir: "./build",
-			index: "index.html",
+			index: "contakt.html",
 			port: 8080
         },
         
