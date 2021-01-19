@@ -1,0 +1,67 @@
+.headquarters {
+	&__wrap {
+		padding-top: 32px;
+	}
+
+	&__button {
+		margin: 0 8px;
+
+		&:first-child {
+			margin-left: 0;
+
+			@media (max-width: 400px) {
+				margin-top: 0;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media (max-width: 400px) {
+			width: 100%;
+			margin: 8px 0;
+		}
+	}
+
+	&__images {
+		height: 640px;
+
+		@media (max-width: 991px) {
+			height: 330px;
+		}
+	}
+
+	&__box-content {
+		background-color: $white;
+		border-radius: $radius;
+		padding: 64px;
+		height: 100%;
+	}
+
+	&__color-header {
+		display: block;
+		color: $primary-color;
+	}
+
+	&__address {
+		display: flex;
+		flex-flow: column;
+		padding-top: 32px;
+	}
+
+	&__contact-details {
+		display: flex;
+		flex-flow: column;
+		padding-top: 32px;
+	}
+
+	&__opening-hours {
+		display: block;
+		padding-top: 40px;
+	}
+
+	&__button-maps {
+		margin-top: 64px;
+	}
+}

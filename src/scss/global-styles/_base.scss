@@ -93,7 +93,7 @@ input {
 	padding-top: $global-distance;
 	background: $background-gradient;
 
-	@media (max-width:1000px) {
+	@media (max-width: 1000px) {
 		padding-top: $global-distance-rwd;
 	}
 }
