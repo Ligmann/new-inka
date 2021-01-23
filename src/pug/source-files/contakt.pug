@@ -22,6 +22,38 @@
 	let buttonName_footer = "Lorem ipsum";
 
 include ../common-components/_head
+
+mixin headquarters-toogle(data = [])
+	ul(class="nav" id="myTab" role='tablist')
+		each item, index in data
+			li(class="nav-item" role="presentation")
+				a(class="headquarters__button nav-item" class=index==0?'active':'' id=item.id+'-tab' data-bs-toggle='tab' href='#'+item.id role='tab' aria-controls=item.id aria-selected=index==0?'true':'false')=item.city
+	div(class="headquarters__wrap tab-content" id="myTabContent")
+		each item, index in data
+			div(class="tab-pane" class=index==0?'active fade show':'' id=item.id role="tabpanel" aria-labelledby=item.id+'-tab')
+				div(class="row")
+					div(class="col-lg-7 headquarters__images-wrap")
+						div(class="headquarters__images")
+							img(src=item.mapImage alt="" class="headquarters__images-items")
+					div(class="col-lg-5")
+						div(class="headquarters__box-content")
+							h3 BHP Inka
+								span(class="headquarters__color-header")=item.city
+							address(class="headquarters__address")
+								b Siedziba firmy
+								span=item.street
+								span=item.postCode
+							span(class="headquarters__contact-details")
+								b Dane do korespondencji
+								a(href=item.phoneURL)=item.phone
+								a(href=item.emailURL)=item.email
+							span(class="headquarters__opening-hours")
+								b Godziny otwarcia <br />
+								=item.openingHours
+							a(href=item.locationURL class="primary-button headquarters__button-maps")
+									| Sprawdź dojazd
+									span(class="button-arrow-right")
+
 body
 	main(type="main")
 		include ../common-components/_nav
@@ -29,60 +61,51 @@ body
 		section.section-wrapper.section-wrapper-AddColor
 			div.container
 				div.headquarters 
-					h2 Sprawdź  siedzibe firmy
-					ul.nav#myTab(role='tablist')
-						li.headquarters__button.nav-item(role='presentation')
-							button.headquarters__button.primary-button.active#home-tab(data-bs-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true') Katowice
-						li.headquarters__button.nav-item(role='presentation')
-							button.headquarters__button.primary-button#profile-tab(data-bs-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false') Sosnowiec
-						li.headquarters__button.nav-item(role='presentation')
-							button.headquarters__button.primary-button#contact-tab(data-bs-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false') Chudów
-					div.headquarters__wrap.tab-content#myTabContent
-						div.tab-pane.fade.show.active#home(role='tabpanel' aria-labelledby='home-tab')
-							div.row
-								div.col-lg-7.headquarters__images
-									img(src="images/slider/text-and-background/spotkanie-dwa.webp", alt="").contakt-two__images
-								div.col-lg-5
-									div.headquarters__box-content
-										h3 BHP Inka #[span.headquarters__color-header Katowice]
-										address.headquarters__address
-											span ul. Gałczyńskiego 21
-											span 41-215 | Sosnowiec
-										span.headquarters__contact-details
-											a(href="") +48 515 760 315
-											a(href="") inkabhp@gmail.com
-										span.headquarters__opening-hours pon - pt: 9:00 - 18:00
-										a(href="").primary-button.headquarters__button-maps Sprawdź dojazd <span class="button-arrow-right"></span>
-						div.tab-pane.fade.show#profile(role='tabpanel' aria-labelledby='home-tab')
-							div.row
-								div.col-lg-7.headquarters__images
-									img(src="images/text-elements/home-bacground.webp", alt="").contakt-two__images
-								div.col-lg-5
-									div.headquarters__box-content
-										h3 BHP Inka #[span.headquarters__color-header Sosnowiec]
-										address.headquarters__address
-											span ul. Gałczyńskiego 21
-											span 41-215 | Sosnowiec
-										span.headquarters__contact-details
-											a(href="") +48 515 760 315
-											a(href="") inkabhp@gmail.com
-										span.headquarters__opening-hours pon - pt: 9:00 - 18:00
-										a(href="").primary-button.headquarters__button-maps Sprawdź dojazd <span class="button-arrow-right"></span>
-						div.tab-pane.fade#contact(role='tabpanel' aria-labelledby='contact-tab')
-							div.row
-								div.col-lg-7.headquarters__images
-									img(src="images/slider/text-and-background/spotkanie.webp", alt="").contakt-two__images
-								div.col-lg-5
-									div.headquarters__box-content
-										h3 BHP Inka #[span.headquarters__color-header Chudów]
-										address.headquarters__address
-											span ul. Gałczyńskiego 21
-											span 41-215 | Sosnowiec
-										span.headquarters__contact-details
-											a(href="") +48 515 760 315
-											a(href="") inkabhp@gmail.com
-										span.headquarters__opening-hours pon - pt: 9:00 - 18:00
-										a(href="").primary-button.headquarters__button-maps Sprawdź dojazd <span class="button-arrow-right"></span>
+					h2 Dane kontaktowe
+					+headquarters-toogle(
+						[
+							{
+								id: 'katowice',
+								mapImage: 'images/maps/maps.webp',
+								city: 'Katowice',
+								street: 'ul. Gałczyńskiego 21',
+								postCode: '41-215 | Sosnowiec',
+								phoneURL: '#',
+								phone: '+48 515 760 315',
+								emailURL: '#',
+								email: 'nkabhp@gmail.com',
+								openingHours: 'pon-pt: 9:00 - 20:00 ',
+								locationURL: 'https://www.google.com/maps/dir//Bednarska+2,+Pozna%C5%84/@52.4128145,16.8867214,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x470444c73b24a59b:0x1844d1282bff599a!2m2!1d16.8889101!2d52.4128112?hl=PL',
+							},
+							{
+								id: 'sosnowiec',
+								mapImage: 'images/maps/maps.webp',
+								city: 'Sosnowiec',
+								street: 'ul. Gałczyńskiego 21',
+								postCode: '41-215 | Sosnowiec',
+								phoneURL: '#',
+								phone: '+48 515 760 315',
+								emailURL: '#',
+								email: 'nkabhp@gmail.com',
+								openingHours: 'pon-pt: 9:00 - 20:00',
+								locationURL: '#',
+							},
+							{
+								id: 'chodow',
+								mapImage: 'images/maps/maps.webp',
+								city: 'Chodów',
+								street: 'ul. Gałczyńskiego 21',
+								postCode: '41-215 | Sosnowiec',
+								phoneURL: '#',
+								phone: '+48 515 760 315',
+								emailURL: '#',
+								email: 'nkabhp@gmail.com',
+								openingHours: 'pon-pt: 9:00 - 20:00 ',
+								locationURL: '#',
+							},
+						]
+					)
+
 		section.contakt-two.section-wrapper-AddColor
 			div.container
 				div.row
@@ -94,8 +117,8 @@ body
 							input(type="text" placeholder="Firma").contakt-two__input
 							input(type="text" placeholder="Numer telefonu").contakt-two__input
 							input(type="text" placeholder="Adres mail").contakt-two__input
-							textarea(name="elo", cols="30", rows="10" placeholder="Wiadomości").contakt-two__texttarea
+							textarea(name="elo" cols="30" rows="10" placeholder="Wiadomości").contakt-two__texttarea
 							input(type="submit" valu="Wyślij Wiadomości").primary-button.contakt-two__button
 					div.col-lg-7
-						img(src="images/text-elements/home-bacground.webp", alt="").contakt-two__images
+						img(src="images/text-elements/home-bacground.webp" alt="").contakt-two__images
 		include ../common-components/_footer
