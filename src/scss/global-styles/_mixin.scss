@@ -43,7 +43,7 @@
 }
 
 //	PARAGRAF MIXIN
-@mixin	text-paragraph($bold-text:false, $add-color:false, $small:false) {
+@mixin	text-paragraph($bold-text:false, $add-color:false, $small:false, $margin:false) {
 	color: $secunadry-color;
 	line-height: 1.8;
 	font-size: .94em;
@@ -71,5 +71,9 @@
 
 	@if	$small {
 		font-size: .59em;
+	}
+
+	@if $margin {
+		margin-bottom: 40px;
 	}
 }

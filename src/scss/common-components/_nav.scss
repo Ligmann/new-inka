@@ -143,7 +143,7 @@
 				.drop-down{
 					transform: translate(-50%, -50%);
 					transition: $animation opacity, $animation z-index, $animation transform;
-					z-index: 2;
+					z-index: 10;
 					opacity: 1;
 
 					@media (max-width:992px) {

@@ -44,6 +44,9 @@ h4{
 	@include text-paragraph($bold-text:true, $add-color:true);
 }
 
+.paragraf-margin{
+	@include text-paragraph($margin:true);
+}
 //	SAMLL TEXT
 .small-text{
 	@include text-paragraph($small:true, $bold-text:true);

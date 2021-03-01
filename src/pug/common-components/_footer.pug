@@ -5,18 +5,8 @@ mixin footer-nafigation(header, ...items)
 			li(class="footer-navigation__list")
 				a(href=item[0])= item[1]
 
-footer.master-footer
-	include ../components/text-elements/_four-columnV1
-	div.master-footer__top
-		div.box-centered
-			div.col-xl-6
-				div.box-centered__text
-					span.rounded-box.small-text-addColor #{alternative_footer}
-					h2 #{header_footer}
-					p.paragraph-text-addColor-bold #{text_footer}
-					a(href="#").left-box__button.primary-button #{buttonName_footer}
-						span.button-arrow-right
-	div.master-footer__botton.section-wrapper
+footer.master-footer.section-wrapper-AddColor
+	div.master-footer__botton
 		div.container
 			div.row
 				div.col-xl-3.col-lg-3.col-md-6.col-sm-12
