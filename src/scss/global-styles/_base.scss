@@ -82,7 +82,7 @@ input {
 
 .section-wrapper-AddColor {
 	padding-top: $global-distance;
-	background: $background-two;
+	background-color: $background-two;
 
 	@media (max-width:1000px) {
 		padding-top: $global-distance-rwd;
@@ -98,6 +98,9 @@ input {
 	}
 }
 
+.section-color {
+	background-color: $background-two;
+}
 //	GLOBAL ROTATE
 .rotate-wrap {
 	// perspective: 5000px;
@@ -193,5 +196,21 @@ input {
 
 	@media (max-width:1200px) {
 		padding-left: 20px;
+	}
+}
+
+.wrap-images-right {
+	padding-right: 64px;
+
+	img {
+		border-radius: $radius;
+	}
+
+	@media (max-width:1400px) {
+		height: 100%;
+	}
+
+	@media (max-width:1200px) {
+		padding-right: 20px;
 	}
 }

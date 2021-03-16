@@ -1,0 +1,21 @@
+// - mixin
+mixin offer-elements(HowOffer, textOffer, items)
+	div.offer-elements
+		h2=HowOffer
+		p(class="paragraph-text-bold")=textOffer
+		p(class="paragraph-text-bold")=textOffer		
+		p(class="paragraph-text-bold")=textOffer
+
+section.two-columnsV2.section-wrapper
+	div.container
+		div.two-columnsV2__wraper
+			+offer-elements(
+				'Lorem Ipsum',
+				'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, numquam atque! Earum provident excepturi consectetur, quos ducimus accusantium quidem voluptate ',
+				['Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor']
+			)
+			+offer-elements(
+				'Lorem Ipsum',
+				'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, numquam atque! Earum provident excepturi consectetur, quos ducimus accusantium quidem voluptate ',
+				['Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor', 'Lorem ipsum dolor']
+			)

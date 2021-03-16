@@ -56,6 +56,9 @@ function process_pug(cb) {
 		'src/pug/source-files/blog.pug',
 		'src/pug/source-files/blog-post.pug',
 		'src/pug/source-files/contakt.pug',
+		'src/pug/source-files/inspection-fire.pug',
+		'src/pug/source-files/management-system-bhp.pug',
+		'src/pug/source-files/management-system-bhp.pug'
 	])
 		.pipe(gulp_pug())
 		.on('error', swallowError)
@@ -133,7 +136,7 @@ function serve(cb) {
 		port: 8080,
 		server: {
 			baseDir: "./build",
-			index: "blog-post.html",
+			index: "extinguishers.html",
 			port: 8080
         },
         
