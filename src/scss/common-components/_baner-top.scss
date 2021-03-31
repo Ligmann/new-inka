@@ -116,6 +116,9 @@
 
 		@media (max-width: 700px) {
 			font-size: 3em;
+			width: auto;
+			text-align: left;
+			word-wrap: break-word;
 		}
 	}
 
