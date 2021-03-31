@@ -17,6 +17,7 @@
 	&__content-box {
 		display: flex;
 		flex-flow: column;
+		padding-left: 48px;
 
 		&--flex-center {
 			@extend #{$root}__content-box;
