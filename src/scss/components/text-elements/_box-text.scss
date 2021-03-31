@@ -1,5 +1,6 @@
 .box-text  {
 	$root: &;
+
 	&__container-image {
 		position: relative;
 		padding-bottom: 380px;
@@ -17,12 +18,13 @@
 	&__content-box {
 		display: flex;
 		flex-flow: column;
-		padding-left: 48px;
+		// padding-left: 48px;
 
 		&--flex-center {
 			@extend #{$root}__content-box;
 			align-items: center;
 		}
+		
 		&--flex-center-vertical {
 			@extend #{$root}__content-box;
 			justify-content: center;

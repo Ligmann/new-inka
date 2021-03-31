@@ -1,5 +1,5 @@
 
-@for $i from 1 through 9 {
+@for $i from 0 through 9 {
 	.mb-#{$i},
 	%mb-#{$i} {
 		margin-bottom: $i * 8px;
@@ -8,5 +8,28 @@
 	.mt-#{$i},
 	%mt-#{$i} {
 		margin-top: $i * 8px;
+	}
+}
+
+
+@for $i from 0 through 9 {
+	.p-#{$i},
+	%p-#{$i} {
+		padding: $i * 8px;
+	}
+
+	.pt-#{$i},
+	%pt-#{$i} {
+		padding-top: $i * 8px;
+	}
+
+	.pb-#{$i},
+	%pb-#{$i} {
+		padding-bottom: $i * 8px;
+	}
+
+	.pl-#{$i},
+	%pl-#{$i} {
+		padding-left: $i * 8px;
 	}
 }

@@ -1,0 +1,28 @@
+.bulleted-list {
+	&__box {
+		counter-reset: iteral;
+		padding: 0;
+	}
+
+	&__item {
+		display: flex;
+	}
+	&__iteral {
+		margin-right: 24px;
+
+		&::before {
+			content: counter(iteral);
+			counter-increment: iteral;
+			width: 24px;
+			height: 24px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid $secunadry-color;
+			border-radius: 100%;
+			font-size: .7em;
+			font-weight: bold;
+			color: $secunadry-color;
+		}
+	}
+}
