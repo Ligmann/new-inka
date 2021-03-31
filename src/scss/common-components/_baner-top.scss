@@ -2,6 +2,12 @@
 	height: 560px;
 	position: relative;
 	padding: 0 64px;
+	overflow: hidden;
+
+	@media (max-width: 700px) {
+		height: inherit;
+		padding: 0;
+	}
 
 	&__box-image {
 		position: absolute;
@@ -12,6 +18,11 @@
 		overflow: hidden;
 		max-height: inherit;
 		max-width: inherit;
+
+		@media (max-width: 700px) {
+			position: inherit;
+			transform: inherit;
+		}
 
 		&::before {
 			content: '';
@@ -24,6 +35,10 @@
 			z-index: 3;
 			border: 10px solid $primary-color;
 			border-left: none;
+
+			@media (max-width: 700px) {
+				display: none;
+			}
 		}
 
 		&::after {
@@ -51,6 +66,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		filter: grayscale(100%);
+
 	}
 
 	&__box-titile {
@@ -58,11 +74,19 @@
 		z-index: 4;
 		width: 560px;
 		height: 100%;
+
+		@media (max-width: 700px) {
+			top: 0;
+		}
 	}
 
 	&__wrap-title {
 		position: relative;
 		height: 100%;
+
+		@media (max-width: 700px) {
+			height: auto;
+		}
 	}
 
 	&__teansform-text {
@@ -73,6 +97,14 @@
 		display: flex;
 		justify-content: center;
 		padding: 0 24px;
+
+		@media (max-width: 700px) {
+			position: inherit;
+			display: block;
+			width: inherit;
+			height: inherit;
+			transform: inherit;
+		}
 	}
 
 	&__item-titile {
@@ -82,6 +114,10 @@
 		font-weight: bold;
 		width: max-content;
 		height: max-content;
+
+		@media (max-width: 700px) {
+			font-size: 3em;
+		}
 	}
 
 	&__box-content {
@@ -94,6 +130,10 @@
 		p {
 			color: $white;
 			font-weight: bold;
+
+			@media (max-width: 700px) {
+				font-size: .9em;
+			}
 		}
 
 		h2 {
@@ -103,6 +143,13 @@
 			color: $white;
 			font-weight: bold;
 			margin-bottom: 10px;
+		}
+
+		@media (max-width: 700px) {
+			top: 60px;
+			left: 0;
+			transform: inherit;
+			margin-left: 27px;
 		}
 	}
 }
