@@ -4,9 +4,12 @@
 	padding: 0 64px;
 	overflow: hidden;
 
+	@media (max-width: 1060px) {
+		padding: 16px;
+	}
+
 	@media (max-width: 700px) {
 		height: inherit;
-		padding: 24px;
 	}
 
 	&__box-image {
@@ -114,8 +117,11 @@
 		width: max-content;
 		height: max-content;
 
-		@media (max-width: 700px) {
+		@media (max-width: 1160px) {
 			font-size: 3em;
+		}
+
+		@media (max-width: 700px) {
 			width: auto;
 			text-align: left;
 			word-wrap: break-word;
