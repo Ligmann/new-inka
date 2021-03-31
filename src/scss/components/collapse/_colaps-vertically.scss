@@ -1,0 +1,42 @@
+.colaps-vertically {
+	&__nav {
+		display: flex;
+		flex-flow: column;
+	}
+
+	&__button {
+		background-color: transparent;
+		border: none;
+		border-right: 4px solid  #ececec;
+		transition: $animation color, $animation border-color;
+		font-size: 1.1em;
+		text-align: left;
+		line-height: 48px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			color: $primary-color-two;
+			border-color: rgba($color: $primary-color-two, $alpha: .5);
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.active {
+		border-right: 4px solid $primary-color-two;
+		color: $primary-color-two;
+		transition: $animation color, $animation border-right;
+	}
+
+	&__right-box {
+		.active {
+			border: none;
+			color: inherit;
+		}
+	}
+}

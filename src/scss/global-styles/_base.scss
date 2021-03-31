@@ -179,7 +179,13 @@ input {
 	background-color: $background-two;
 	padding: 16px 24px;
 	border-radius: 24px;
+	text-transform: uppercase;
 	display: inline-block;
+	
+	&--white {
+		@extend .rounded-box;
+		background-color: $white;
+	}
 }
 
 //	GLOBALS WRAP IMAGES

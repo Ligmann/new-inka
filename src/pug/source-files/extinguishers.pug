@@ -1,0 +1,65 @@
+-
+	//-	Title
+	let nameTitle = "Usługi BHP: kursy i ochrona przeciwpożarowa – BHP INKA Śląsk";
+
+	//-	Baner top
+	let baner_top_img = "images/slider/text-and-background/spotkanie.webp"
+	let baner_top_h1 = "Sprzedarz Gaśnic";
+	let baner_top_h2 = "Lorem Ipsum is simply"
+	let baner_top_content = "Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit."
+
+	//-	two-columnV1
+	let h2_two_columnV1 = "Lorem ipsum, dolor sit ", h2_color_two_columnV1 = "Lorem ipsum Necessitatibus.";
+	let text_two_columnV1 = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error fugiat suscipit a dignissimos adipisci ad molestias minima provident fuga iste ut cumque harum temporibus";
+	let Icon_images_two_columnV1= "images/icons/text-elements/coordinator.svg", Icon_alt_two_columnV1="alt", Icon_h3_two_columnV1="Lorem ipsum, dolor sit", Icon_text_two_columnV1="Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit.";
+	let Icon_imagesTwo_two_columnV1= "images/icons/text-elements/student.svg", Icon_altTwo_two_columnV1="alt", Icon_h3Two_two_columnV1="Lorem ipsum, dolor sit", Icon_textTwo_two_columnV1="Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit.";
+	let images_two_columnV1="images/text-elements/home-bacground.webp", alt_two_columnV1 = "alt";
+	//-	two-columnV3
+	let h2_two_columnV3 = "Lorem ipsum, dolor sit ", h2_color_two_columnV3 = "Lorem ipsum Necessitatibus.";
+	let text_two_columnV3 = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error fugiat suscipit a dignissimos adipisci ad molestias minima provident fuga iste ut cumque harum temporibus";
+	let Icon_images_two_columnV3= "images/icons/text-elements/coordinator.svg", Icon_alt_two_columnV3="alt", Icon_h3_two_columnV3="Lorem ipsum, dolor sit", Icon_text_two_columnV3="Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit.";
+	let Icon_imagesTwo_two_columnV3= "images/icons/text-elements/student.svg", Icon_altTwo_two_columnV3="alt", Icon_h3Two_two_columnV3="Lorem ipsum, dolor sit", Icon_textTwo_two_columnV3="Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit.";
+	let images_two_columnV3="images/text-elements/home-bacground.webp", alt_two_columnV3 = "alt";
+
+	
+include ../common-components/_head
+
+mixin box-centered(text, icon, color_class)
+	div(class=color_class class="card")
+		div.card__header.mb-2
+			div.card__box-icon
+				span.card__icon.global-icon
+					img(src=icon alt="elo")
+			h3.card__title Lorem ipsum dolor sit amet consectetur.
+		div.card__content
+			p.paragraph-text= text	
+
+body
+	main(type="main")
+		include ../common-components/_nav
+		include ../common-components/_baner-top
+		section.section-wrapper
+			div.container
+				h2 Lorem ipsum dolor sit <br /> amet consectetur.
+				include ../components/collapse/_colaps-vertically
+				div.section-wrapper
+		section.extinguishers.section-wrapper-AddColor
+			div.container
+				div.box-centered
+					div.col-md-6.box-centered__text
+						span.rounded-box--white.small-text-addColor.mb-2 dolar siolux
+						h2 Elo ziomek
+						p.paragraph-text-bold Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit.
+				div.row.mt-6
+					div.col-md-4
+						+box-centered('We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too.', "images/icons/home/leadership.svg")
+					div.col-md-4
+						+box-centered("You don't only need a theme, but also great tools in order to ease the process or building and customizing. And this is exactly what we offer you. Lorem ipsum dolor sit amet consectetur adipisicing elit", "images/icons/text-elements/student.svg")
+					div.col-md-4
+						+box-centered('is lighter and faster than most of the themes out there which means you get more for less. Check out the components and examples pages.', "images/icons/home/team.svg")
+			div.section-wrapper-AddColor
+		include ../components/text-elements/_two-columnV3
+		include ../components/text-elements/_two-columnV1
+
+		div.section-wrapper 
+		include ../common-components/_footer

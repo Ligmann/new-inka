@@ -2,12 +2,11 @@
 	//-	Title
 	let nameTitle = "Usługi BHP: kursy i ochrona przeciwpożarowa – BHP INKA Śląsk";
 
-	//-	header V2
-	let h1_header_top = "Welcome to", h1_header_top_color = "Landkit", h1_header_top_br = "Develop anything.";
-	let text_header_top = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-	let linkOne_header_top = "/o-firmie", linkOne_text_header_top = "Poznaj Nas"; 
-	let linkTwo_header_top = "/szkolenia-bhp", linkTwo_text_header_top = "Szkolenia Online";
-	let image_headerV2= "images/header/contakt/contant-hed.webp", altImage_headerV2 = "elo";
+	//-	Baner top
+	let baner_top_img = "images/form/v1/images-contakt.webp"
+	let baner_top_h1 = "Kontakt";
+	let baner_top_h2 = "Lorem Ipsum is simply"
+	let baner_top_content = "Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit."
 
 	//-	four-columnV1
 	let images_four_columnV1 = "images/icons/check/check-header.svg", alt_four_columnV1 = "alt",header_four_columnV1 = "Lorem Ipsum dolar", text_four_columnV1= "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In placeat quidem cumque quis nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
@@ -57,7 +56,7 @@ mixin headquarters-toogle(data = [])
 body
 	main(type="main")
 		include ../common-components/_nav
-		include ../common-components/_headerV2
+		include ../common-components/_baner-top
 		section.section-wrapper-AddColor
 			div.container
 				div.headquarters 

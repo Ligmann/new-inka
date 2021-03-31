@@ -1,0 +1,30 @@
+.box-text  {
+	$root: &;
+	&__container-image {
+		position: relative;
+		padding-bottom: 380px;
+	}
+
+	&__item-image {
+		position: absolute;
+		min-width: 100%;
+		min-height: 100%;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__content-box {
+		display: flex;
+		flex-flow: column;
+
+		&--flex-center {
+			@extend #{$root}__content-box;
+			align-items: center;
+		}
+		&--flex-center-vertical {
+			@extend #{$root}__content-box;
+			justify-content: center;
+		}
+	}
+}

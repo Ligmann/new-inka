@@ -58,7 +58,7 @@ function process_pug(cb) {
 		'src/pug/source-files/contakt.pug',
 		'src/pug/source-files/inspection-fire.pug',
 		'src/pug/source-files/management-system-bhp.pug',
-		'src/pug/source-files/management-system-bhp.pug'
+		'src/pug/source-files/extinguishers.pug'
 	])
 		.pipe(gulp_pug())
 		.on('error', swallowError)

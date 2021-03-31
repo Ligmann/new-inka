@@ -5,13 +5,14 @@
 @import 'global-styles/_base';
 @import 'global-styles/_font';
 @import 'global-styles/animation';
+@import 'global-styles/loop';
 
 //	COMMON-COMPONENTS
 @import 'common-components/_nav';
 @import 'common-components/_header-top';
 @import 'common-components/_footer';
 @import 'common-components/_footer-top';
-@import 'common-components/_headerV2';
+@import 'common-components/_baner-top';
 @import 'common-components/_blog';
 @import 'common-components/_blog-post';
 
@@ -20,6 +21,11 @@
 @import 'components/text-elements/_two-columnV1';
 @import 'components/text-elements/_two-columnV2';
 @import 'components/text-elements/_four-columnV1';
+@import 'components/text-elements/_card';
+@import 'components/text-elements/_box-text.scss';
+
+//	COLAPSE
+@import 'components/collapse/_colaps-vertically';
 
 //	SLIDERS
 @import 'components/slider/_partners';

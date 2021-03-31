@@ -54,3 +54,12 @@ drop_downBurger_exit.addEventListener("click", function () {
 	drop_downBurger_exid.classList.remove("down-burger");
 
 });
+
+// Image sizes
+
+const classImage = 'js-size-image';
+const imageSize = document.querySelector(`.${classImage}`);
+
+imageSize.addEventListener('click', e => {
+	console.log(e)
+})
