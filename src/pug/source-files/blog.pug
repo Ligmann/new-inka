@@ -45,12 +45,22 @@ body
 					+blog-post
 					+blog-post
 					+blog-post
-				div.pagination
-					div.pagination_box
-						a(href="#")
-						a(href="#")
-						a(href="#")
-						a(href="#")  
+				div.pagination.pb-4
+					div.pagination__box
+						button.pagination__arrow-box.pagination__element
+							span.pagination__arrow-icon-left
+						a(href="#").pagination__item.pagination__element
+							span 1
+						a(href="#").pagination__item.pagination__element
+							span 2
+						a(href="#").pagination__item.pagination__element
+							span 3
+						a(href="#").pagination__item.pagination__element  
+							span 4
+						a(href="#").pagination__item.pagination__element 
+							span ...
+						button.pagination__arrow-box.pagination__element
+							span.pagination__arrow-icon-right
 		include ../components/text-elements/_two-columnV2
 		//- include ../components/slider/_partners
 		include ../common-components/_footer
