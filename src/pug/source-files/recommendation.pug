@@ -1,0 +1,86 @@
+-
+	//-	Title
+	let nameTitle = "Usługi BHP: kursy i ochrona przeciwpożarowa – BHP INKA Śląsk";
+	//-	Baner top
+	let baner_top_img = "images/slider/text-and-background/spotkanie.webp"
+	let baner_top_h1 = "Referencje";
+	let baner_top_h2 = "Lorem Ipsum is simply"
+	let baner_top_content = "Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit."
+
+	//-	three-columnV1
+	let imagesOne_three_column = "images/icons/home/communication.svg", altOne_three_column = "alt", textOne_three_column = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vel iusto excepturi ipsum facere eos unde aspernatur dolore cumque.";
+	let imagesTwo_three_column = "images/icons/home/leadership.svg", altTwo_three_column = "alt", textTwo_three_column = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vel iusto excepturi ipsum facere eos unde aspernatur dolore cumque.";
+	let imagesThree_three_column = "images/icons/home/team.svg", altThree_three_column = "alt", textThree_three_column = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vel iusto excepturi ipsum facere eos unde aspernatur dolore cumque.";
+	
+	let h2_two_columnV2 = "Lorem ipsum, dolor sit " , h2_two_color_columnV2 = "Lorem ipsum Necessitatibus.";
+	let text_two_columnV2 = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In placeat quidem cumque quis nihil. Quas veritatis odio quos, numquam natus ea reprehenderit placeat quia, eveniet ullam commodi dolor illo. Possimus.";
+	let InfNumber_two_columnV2 = "100%", InfText_two_columnV2 = "Satisfaction";
+	let InfNumberTwo_two_columnV2 = "24/4", InfTextTwo_two_columnV2 = "Satisfaction";
+	let InfNumberThree_two_columnV2 = "100k+", InfTextThree_two_columnV2 = "Satisfaction";
+	let images_columnV2 = "images/text-elements/razem.webp", alt_columnV2 = "alt";
+include ../common-components/_head
+
+mixin box-centered(text, icon, color_class)
+	div(class=color_class class="card")
+		div.card__header.mb-2
+			div.card__box-icon
+				span.card__icon.global-icon
+					img(src=icon alt="elo")
+			h3.card__title Lorem ipsum dolor sit amet consectetur.
+		div.card__content
+			p.paragraph-text= text	
+
+body
+	main(type="main")
+		include ../common-components/_nav
+		include ../common-components/_baner-top
+		div.section-wrapper
+			include ../components/text-elements/_two-columnV2
+			include ../components/slider/_partners
+		section.section-wrapper
+			div.container
+				div.box-text
+					section.section-wrapper
+						div.row
+							div.col-lg-5
+								div.box-text__container-image
+									img(src="https://bhp-inka.pl/wp-content/uploads/2015/10/WUP-wpis-instyt.jpg" alt="" class="box-text__item-image")
+							div.col-lg-6.offset-md-1.box-text__content-box--flex-center-vertical.pl-4
+								div 
+									h2.mb-2 Spółdzielnia mieszkaniowa ,,Lokum’’
+									p.paragraph-text-bold.mb-1 The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.
+									p.paragraph-text Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion. Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
+									a(href="https://bhp-inka.pl/wp-content/uploads/2015/10/WUP-wpis-instyt.jpg" class="primary-button mt-3" target="_blank") Zobacz zaświadczenie
+					section.section-wrapper
+						div.row
+							div.col-lg-6.pl-4
+								h2.mb-2 Key benefits of Space template
+								p.paragraph-text-bold.mb-1 The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.
+								p.paragraph-text Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion. Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
+								a(href="https://bhp-inka.pl/wp-content/uploads/2015/10/WUP-wpis-instyt.jpg" class="primary-button mt-3" target="_blank") Zobacz zaświadczenie
+							div.col-lg-5.offset-md-1
+								div.box-text__container-image
+									img(src="images/heepy-team.jpg" alt="" class="box-text__item-image")
+					section.section-wrapper
+						div.row
+							div.col-lg-5
+								div.box-text__container-image
+									img(src="images/heepy-team.jpg" alt="" class="box-text__item-image")
+							div.col-lg-6.offset-md-1.box-text__content-box--flex-center-vertical.pl-4
+								div 
+									h2.mb-2 Key benefits of Space template
+									p.paragraph-text-bold.mb-1 The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.
+									p.paragraph-text Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion. Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
+									a(href="https://bhp-inka.pl/wp-content/uploads/2015/10/WUP-wpis-instyt.jpg" class="primary-button mt-3" target="_blank") Zobacz zaświadczenie
+					section.section-wrapper
+						div.row
+							div.col-lg-6.pl-4
+								h2.mb-2 Key benefits of Space template
+								p.paragraph-text-bold.mb-1 The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.
+								p.paragraph-text Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion. Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
+								a(href="https://bhp-inka.pl/wp-content/uploads/2015/10/WUP-wpis-instyt.jpg" class="primary-button mt-3" target="_blank") Zobacz zaświadczenie
+							div.col-lg-5.offset-md-1
+								div.box-text__container-image
+									img(src="images/heepy-team.jpg" alt="" class="box-text__item-image")
+			div.section-wrapper
+				include ../common-components/_footer
