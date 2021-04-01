@@ -58,7 +58,8 @@ function process_pug(cb) {
 		'src/pug/source-files/contakt.pug',
 		'src/pug/source-files/inspection-fire.pug',
 		'src/pug/source-files/management-system-bhp.pug',
-		'src/pug/source-files/extinguishers.pug'
+		'src/pug/source-files/extinguishers.pug',
+		'src/pug/source-files/trening-online.pug'
 	])
 		.pipe(gulp_pug())
 		.on('error', swallowError)
@@ -136,7 +137,7 @@ function serve(cb) {
 		port: 8080,
 		server: {
 			baseDir: "./build",
-			index: "extinguishers.html",
+			index: "trening-online.html",
 			port: 8080
         },
         
