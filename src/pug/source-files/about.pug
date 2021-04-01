@@ -37,31 +37,45 @@ mixin box-centered(text, icon, color_class)
 					img(src=icon alt="elo")
 			h3.card__title Lorem ipsum dolor sit amet consectetur.
 		div.card__content
-			p.paragraph-text= text	
+			p.paragraph-text-bold= text	
 
 body
 	main(type="main")
 		include ../common-components/_nav
 		include ../common-components/_baner-top
+		section.section-wrapper
+			include ../components/slider/_informations-twoColumns
+			div.container
+				div.row.mt-7
+					div.col-lg-5.box-text__content-box--flex-center-vertical.pl-4
+						div 
+							h3.mb-2 Key benefits of Space template
+							p.paragraph-text-bold.mb-1 The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.
+							p.paragraph-text.mb-1 Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
+							p.paragraph-text Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
+					div.col-lg-6.offset-md-1
+						div.box-text__container-image
+							img(src="images/heepy-team.jpg" alt="" class="box-text__item-image")
+			div.section-wrapper
 		section.extinguishers.section-wrapper-AddColor
 			div.container
 				div.box-centered
 					div.col-md-6.box-centered__text
 						span.rounded-box--white.small-text-addColor.mb-2 dolar siolux
-						h2 Elo ziomek
+						h2 Lorem ipsum dolor
 						p.paragraph-text-bold Lorem ipsum dolor sit amet consectetur adipisicing elit consectetur adipisicing elit elit consectetur adipisicing elit.
 				div.row.mt-6
-					div.col-lg-6
-						+box-centered('We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too.', "images/icons/home/leadership.svg")
-					div.col-lg-6
+					div.col-lg-4.mb-3
 						+box-centered("You don't only need a theme, but also great tools in order to ease the process or building and customizing. And this is exactly what we offer you. Lorem ipsum dolor sit amet consectetur adipisicing elit", "images/icons/text-elements/student.svg")
-					div.col-lg-6
-						+box-centered('is lighter and faster than most of the themes out there which means you get more for less. Check out the components and examples pages.', "images/icons/home/team.svg")
-					div.col-lg-6
-						+box-centered('We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too.', "images/icons/home/leadership.svg")
-					div.col-lg-6
-						+box-centered('We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too.', "images/icons/home/leadership.svg")
-					div.col-lg-6
+					div.col-lg-4.mb-3
+						+box-centered("You don't only need a theme, but also great tools in order to ease the process or building and customizing. And this is exactly what we offer you. Lorem ipsum dolor sit amet consectetur adipisicing elit", "images/icons/text-elements/student.svg")
+					div.col-lg-4.mb-3
+						+box-centered("You don't only need a theme, but also great tools in order to ease the process or building and customizing. And this is exactly what we offer you. Lorem ipsum dolor sit amet consectetur adipisicing elit", "images/icons/text-elements/student.svg")
+					div.col-lg-4
+						+box-centered("You don't only need a theme, but also great tools in order to ease the process or building and customizing. And this is exactly what we offer you. Lorem ipsum dolor sit amet consectetur adipisicing elit", "images/icons/text-elements/student.svg")
+					div.col-lg-4
+						+box-centered("You don't only need a theme, but also great tools in order to ease the process or building and customizing. And this is exactly what we offer you. Lorem ipsum dolor sit amet consectetur adipisicing elit", "images/icons/text-elements/student.svg")
+					div.col-lg-4
 						+box-centered("You don't only need a theme, but also great tools in order to ease the process or building and customizing. And this is exactly what we offer you. Lorem ipsum dolor sit amet consectetur adipisicing elit", "images/icons/text-elements/student.svg")
 			div.section-wrapper-AddColor
 		section.section-wrapper
@@ -77,22 +91,9 @@ body
 								h3.mb-2 Key benefits of Space template
 								p.paragraph-text.mb-1 The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.
 								p.paragraph-text Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion. Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
-					div.row.mt-9
-						div.col-lg-6.box-text__content-box--flex-center-vertical.pl-4
-							div 
-								span.rounded-box.small-text-addColor.mb-2.mt-xs-3.mt-sm-3.mt-md-3 to bring those ideas
-								h3.mb-2 Key benefits of Space template
-								p.paragraph-text-bold.mb-1 The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.
-								p.paragraph-text Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
-						div.col-lg-5.offset-md-1
-							div.box-text__container-image
-								img(src="images/heepy-team.jpg" alt="" class="box-text__item-image")
 				div.section-wrapper
-		section.section-wrapper-AddColor 
-			include ../components/slider/_informations-twoColumns
-			div.section-wrapper-AddColor
-		include ../components/text-elements/_two-columnV1
 		section.section-wrapper
 			include ../components/slider/_partners
-		div
+		include ../components/text-elements/_two-columnV1
+		div.section-wrapper
 			include ../common-components/_footer
