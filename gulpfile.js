@@ -59,7 +59,10 @@ function process_pug(cb) {
 		'src/pug/source-files/inspection-fire.pug',
 		'src/pug/source-files/management-system-bhp.pug',
 		'src/pug/source-files/extinguishers.pug',
-		'src/pug/source-files/trening-online.pug'
+		'src/pug/source-files/trening-online.pug',
+		'src/pug/source-files/about.pug',
+		'src/pug/source-files/cooperation.pug',
+		'src/pug/source-files/recommendation.pug'
 	])
 		.pipe(gulp_pug())
 		.on('error', swallowError)
