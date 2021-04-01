@@ -1,35 +1,38 @@
+@each $s, $size in $sizes {
+	$i: index(($sizes), ($s $size));
+	$maxWidth: all;
+	@if($i + 1 <= length($sizes)) {
+		$maxWidth: "max-width: #{nth(nth($sizes, $i + 1), 2)}";
+	}
+	$margins: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9;
+	@each $margin in $margins {
+	    .m-#{$margin} {margin: $margin * 8px}
+		.mb-#{$margin} {margin-bottom: $margin * 8px}
+		.mt-#{$margin} {margin-top: $margin * 8px}
+		.ml-#{$margin} {margin-left: $margin * 8px}
+		.mr-#{$margin} {margin-right: $margin * 8px}
 
-@for $i from 0 through 9 {
-	.mb-#{$i},
-	%mb-#{$i} {
-		margin-bottom: $i * 8px;
+		.p-#{$margin} {padding: $margin * 8px}
+		.pb-#{$margin} {padding-bottom: $margin * 8px}
+		.pt-#{$margin} {padding-top: $margin * 8px}
+		.pl-#{$margin} {padding-left: $margin * 8px}
+		.pr-#{$margin} {padding-right: $margin * 8px}
 	}
 
-	.mt-#{$i},
-	%mt-#{$i} {
-		margin-top: $i * 8px;
-	}
-}
+	// @media (min-width: 991px) and (all) {
+	@media (min-width: $size) and (#{$maxWidth}) {
+		@each $margin in $margins {
+		    .m-#{$s}-#{$margin} {margin: $margin * 8px}
+			.mb-#{$s}-#{$margin} {margin-bottom: $margin * 8px}
+			.mt-#{$s}-#{$margin} {margin-top: $margin * 8px}
+			.ml-#{$s}-#{$margin} {margin-left: $margin * 8px}
+			.mr-#{$s}-#{$margin} {margin-right: $margin * 8px}
 
-
-@for $i from 0 through 9 {
-	.p-#{$i},
-	%p-#{$i} {
-		padding: $i * 8px;
-	}
-
-	.pt-#{$i},
-	%pt-#{$i} {
-		padding-top: $i * 8px;
-	}
-
-	.pb-#{$i},
-	%pb-#{$i} {
-		padding-bottom: $i * 8px;
-	}
-
-	.pl-#{$i},
-	%pl-#{$i} {
-		padding-left: $i * 8px;
+		    .p-#{$s}-#{$margin} {padding: $margin * 8px}
+			.pb-#{$s}-#{$margin} {padding-bottom: $margin * 8px}
+			.pt-#{$s}-#{$margin} {padding-top: $margin * 8px}
+			.pl-#{$s}-#{$margin} {padding-left: $margin * 8px}
+			.pr-#{$s}-#{$margin} {padding-right: $margin * 8px}
+		}
 	}
 }

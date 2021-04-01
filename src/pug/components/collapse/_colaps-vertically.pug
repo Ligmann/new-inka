@@ -2,7 +2,7 @@
 //mixin
 
 div.row.colaps-vertically
-	div.col-md-3
+	div.col-lg-3
 		div.nav.colaps-vertically__nav(role='tablist' aria-orientation='vertical')
 			button.colaps-vertically__button.active#v-pills-home-tab(data-bs-toggle='pill' data-bs-target='#v-pills-home' type='button' role='tab' aria-controls='v-pills-home' aria-selected='true') 
 				| 1. Home
@@ -12,17 +12,17 @@ div.row.colaps-vertically
 				| 3. Messages
 			button.colaps-vertically__button#v-pills-settings-tab(data-bs-toggle='pill' data-bs-target='#v-pills-settings' type='button' role='tab' aria-controls='v-pills-settings' aria-selected='false') 
 				| 4. Setting
-	div.col-md-9
+	div.col-lg-9.mt-xs-3.mt-sm-3.mt-md-3
 		div.tab-content.colaps-vertically__right-box#v-pills-tabContent
 			div.tab-pane.show.active#v-pills-home(role='tabpanel' aria-labelledby='v-pills-home-tab')
 				div.box-text
 					div.row
-						div.col-md-4
+						div.col-lg-4
 							div.box-text__container-image
 								img(src="images/heepy-team.jpg" alt="" class="box-text__item-image")
-						div.col-md-8.box-text__content-box--flex-center-vertical.pl-4
+						div.col-lg-8.box-text__content-box--flex-center-vertical.pl-4
 							div 
-								span.rounded-box.small-text-addColor.mb-2 to bring those ideas
+								span.rounded-box.small-text-addColor.mb-2.mt-xs-3.mt-sm-3.mt-md-3 to bring those ideas
 								h3.mb-2 Key benefits of Space template
 								p.paragraph-text.mb-1 The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.
 								p.paragraph-text Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
@@ -31,7 +31,7 @@ div.row.colaps-vertically
 				div.row
 					div.col-md-6
 						+box-centered('We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too.', "images/icons/home/leadership.svg", 'card--gray-subtle')
-					div.col-md-6
+					div.col-md-6.mt-md-3.mt-sm-3.mt-xs-3
 						+box-centered('We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too.', "images/icons/home/leadership.svg", 'card--gray-subtle')
 					div.col-md-6.mt-3
 						+box-centered('We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too.', "images/icons/home/leadership.svg", 'card--gray-subtle')

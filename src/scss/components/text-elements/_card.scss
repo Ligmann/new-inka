@@ -16,6 +16,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@media (max-width: 991px) {
+			justify-content: start;
+		}
 	}
 
 	&__box-icon {
@@ -28,5 +32,9 @@
 		background-color: $gray-light;
 		padding: 8px;
 		// box-shadow: 1px 1px 13px #d2d2d2;
+	}
+
+	@media (max-width: 991px) {
+		padding: 24px;
 	}
 }
