@@ -24,17 +24,21 @@ function process_babel(arg1, arg2) {
 	var callback = false;
 
 	var fname;
-	if(arg1 instanceof Function && arg1.name == 'done') {
-		fname = 'src/javascript/**/*.{js,es6,main}';
+	var base = {"base": "src/javascript"};
+
+	console.log(arg1, arg2);
+
+	if(arg1 instanceof Function && arg1.name == 'done') { // komenda: gulp
+		fname = 'src/javascript/**/*.{js,es6}';
 		callback = true;
 	}
-	else {
+	else { // komenda: gulp watch (przeładowanie)
 		fname = arg2;
 	}
 
 	console.log('Processing \"' + fname + '\"...');
 
-    gulp.src(fname, {"base": "src/js"})
+    gulp.src(fname, base)
         .pipe(sourcemaps.init())
 		.pipe(gulp_babel({
             presets: [
@@ -43,7 +47,7 @@ function process_babel(arg1, arg2) {
             ]
         }))
         .pipe(sourcemaps.write('.'))
-		.on('error', swallowError)
+		.on('error', swallowError) // coś jest nie tak z tym gulpfile, bo nie przetwarzał tego pliku zw ; nie ogarniam xd czaisz? nie wiem o co loto 
 		.pipe(gulp.dest('build/js'));
 
 	if(callback)
@@ -163,7 +167,7 @@ function serve(cb) {
 	gulp.watch([
 		"build/css/**/*.css",
 		"build/**/*.html",
-		"build/javascript/**/*.js",
+		"build/js/**/*.js",
 		"build/images/**/*.{jpeg,jpg,gif,webp,png,svg}",
 	], reload);
 
