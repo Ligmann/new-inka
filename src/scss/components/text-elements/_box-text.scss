@@ -31,4 +31,10 @@
 			justify-content: center;
 		}
 	}
+
+	&__flex-reverse {
+		@media (max-width: 991px) {
+			flex-flow: wrap-reverse;
+		}
+	}
 }
