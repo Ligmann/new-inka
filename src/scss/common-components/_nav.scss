@@ -115,6 +115,14 @@
 							padding-bottom: 8px;
 							font-size: .89em;
 							padding-left: 10px;
+
+							@media (max-width: 992px){ 
+								list-style-type: none;
+								font-weight: 900;
+								font-size: 1em;
+								line-height: 30px;
+								padding-bottom: 0;
+							}
 						}
 					}
 
@@ -155,6 +163,10 @@
 
 				&:hover {
 					color: $primary-color;
+
+					@media (max-width: 992px) {
+						color: $secundary-color-two;
+					}
 				}
 
 				&__arrow {
@@ -173,7 +185,7 @@
 					}
 
 					@media (max-width:992px) {
-						display: block;
+						display: none;
 						padding-bottom: 16px;
 					}
 				}
@@ -184,6 +196,9 @@
 
 				@media (max-width:992px){
 					width: 100%;
+					font-weight: 900;
+					font-size: 1em;
+					line-height: 27px;
 				}
 			}
 
