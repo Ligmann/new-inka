@@ -13,18 +13,41 @@
 			&:nth-child(3),
 			&:nth-child(4) {
 				margin-bottom: 0;
+
+				@media (max-width: 800px) {
+					margin-right: 40px;
+					margin-bottom: 48px;
+				}
+			}
+
+			&:nth-child(4) {
+				
+				@media (max-width: 800px) {
+					margin-bottom: 0px;
+				}
 			}
 
 			.global-icon{
 				margin-right: 24px;
 				background-color: $background-two;
 				padding: 10px;
-				height: 32px;
+				height: 35px;
+				width: 35px;
+				position: relative;
 				display: flex;
 				flex-flow: column;
 				justify-content: center;
 				align-items: center;
 				border-radius: $radius;
+
+				img {
+					position: absolute;
+					width: 16px;
+					height: 16px;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
 			}
 
 			@media (max-width:1200px) {
@@ -35,6 +58,16 @@
 			@media (max-width:776px) {
 				width: 100%;
 			}
+
+			&__text {
+				width: 88%;
+
+				@media (max-width: 800px) {
+					width: 100%;
+				}
+			}
 		}
 	}
+
+
 }
